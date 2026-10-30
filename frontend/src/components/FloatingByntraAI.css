@@ -1,0 +1,374 @@
+
+.byntra-ai-root {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 1000;
+  font-family: "DM Sans", sans-serif;
+  color: #f7ead9;
+}
+
+.byntra-ai-fab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 0 20px;
+  margin-left: auto;
+  border: 1px solid #e6c69e;
+  border-radius: 999px;
+  background: #e7c69e;
+  color: #09271c;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.38);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+}
+
+.byntra-ai-fab:hover {
+  background: #f6dfc0;
+}
+
+.byntra-ai-fab-open {
+  width: 54px;
+  min-height: 54px;
+  padding: 0;
+}
+
+.byntra-ai-unread {
+  position: absolute;
+  top: 0;
+  right: 2px;
+  width: 11px;
+  height: 11px;
+  border: 2px solid #061c16;
+  border-radius: 50%;
+  background: #e16e65;
+}
+
+.byntra-ai-window {
+  display: flex;
+  flex-direction: column;
+  width: min(390px, calc(100vw - 32px));
+  height: min(570px, calc(100dvh - 120px));
+  min-height: 280px;
+  margin-bottom: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(215, 177, 138, 0.5);
+  border-radius: 20px;
+  background: #061e17;
+  box-shadow: 0 22px 75px rgba(0, 0, 0, 0.55);
+}
+
+.byntra-ai-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 17px 16px;
+  border-bottom: 1px solid #294d3b;
+  background: #09271d;
+}
+
+.byntra-ai-identity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.byntra-ai-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #dfbc91;
+  color: #09271d;
+}
+
+.byntra-ai-identity strong,
+.byntra-ai-identity small {
+  display: block;
+}
+
+.byntra-ai-identity strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: #f6e7d5;
+}
+
+.byntra-ai-identity small {
+  margin-top: 3px;
+  font-size: 10px;
+  color: #d4b48e;
+}
+
+.byntra-ai-header-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.byntra-ai-header-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 31px;
+  height: 31px;
+  padding: 0;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: #f0e0cb;
+  cursor: pointer;
+}
+
+.byntra-ai-header-actions button:hover {
+  background: #194231;
+}
+
+.byntra-ai-header-actions button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.byntra-ai-messages {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  scrollbar-width: thin;
+  scrollbar-color: #3e614e transparent;
+}
+
+.byntra-ai-intro {
+  margin: auto 0;
+  text-align: center;
+  padding: 15px;
+}
+
+.byntra-ai-intro-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #183d2e;
+  color: #e6c39b;
+}
+
+.byntra-ai-intro h3 {
+  margin: 0 0 12px;
+  color: #f8e9d6;
+  font-size: 22px;
+}
+
+.byntra-ai-intro p {
+  color: #c5d1c4;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.byntra-ai-intro-note {
+  display: block;
+  margin-top: 15px;
+  color: #b6a28a;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.byntra-ai-message {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.byntra-ai-message-user {
+  justify-content: flex-end;
+}
+
+.byntra-ai-message-assistant {
+  justify-content: flex-start;
+}
+
+.byntra-ai-message-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #d8b68d;
+  color: #0a281d;
+}
+
+.byntra-ai-bubble {
+  max-width: 85%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-size: 13px;
+  line-height: 1.65;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.byntra-ai-message-user .byntra-ai-bubble {
+  border-bottom-right-radius: 4px;
+  background: #dfc39f;
+  color: #102a20;
+}
+
+.byntra-ai-message-assistant .byntra-ai-bubble {
+  border-bottom-left-radius: 4px;
+  background: #173c2d;
+  color: #f6e8d7;
+}
+
+.byntra-ai-thinking {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px;
+  color: #cbb18f;
+  font-size: 12px;
+}
+
+.byntra-ai-spin {
+  animation: byntra-ai-rotate 1s linear infinite;
+}
+
+@keyframes byntra-ai-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.byntra-ai-error {
+  display: flex;
+  gap: 9px;
+  padding: 12px;
+  border: 1px solid #934e4b;
+  border-radius: 9px;
+  background: #402421;
+  color: #ffddd6;
+  font-size: 12px;
+}
+
+.byntra-ai-composer {
+  display: flex;
+  align-items: flex-end;
+  gap: 9px;
+  padding: 12px;
+  border-top: 1px solid #2c4d3b;
+  background: #09271e;
+}
+
+.byntra-ai-composer textarea {
+  flex: 1;
+  min-width: 0;
+  min-height: 43px;
+  max-height: 110px;
+  padding: 12px;
+  resize: vertical;
+  border: 1px solid #345b46;
+  border-radius: 12px;
+  outline: none;
+  background: #133729;
+  color: #f8ecdc;
+  font-size: 13px;
+}
+
+.byntra-ai-composer textarea::placeholder {
+  color: #a8b8aa;
+}
+
+.byntra-ai-composer textarea:focus {
+  border-color: #d8b68d;
+}
+
+.byntra-ai-composer button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  border: 0;
+  border-radius: 11px;
+  background: #e4c49d;
+  color: #09271d;
+  cursor: pointer;
+}
+
+.byntra-ai-composer button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.byntra-ai-footer {
+  padding: 0 10px 9px;
+  background: #09271e;
+  color: #829b89;
+  font-size: 10px;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .byntra-ai-root {
+    right: 12px;
+    bottom: calc(78px + env(safe-area-inset-bottom));
+  }
+
+  .byntra-ai-fab {
+    min-height: 50px;
+    padding: 0 15px;
+    font-size: 12px;
+  }
+
+  .byntra-ai-fab-open {
+    width: 50px;
+    padding: 0;
+  }
+
+  .byntra-ai-window {
+    width: min(390px, calc(100vw - 24px));
+    height: min(
+      550px,
+      calc(100dvh - 175px - env(safe-area-inset-bottom))
+    );
+    min-height: 0;
+    border-radius: 17px;
+  }
+}
+
+@media (max-width: 390px) {
+  .byntra-ai-header {
+    padding: 12px;
+  }
+
+  .byntra-ai-identity strong {
+    font-size: 17px;
+  }
+
+  .byntra-ai-identity small {
+    font-size: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .byntra-ai-spin {
+    animation: none;
+  }
+}

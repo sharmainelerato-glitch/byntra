@@ -1,0 +1,74 @@
+/* BYNTRA floating assistant: layout and scroll fixes, after original CSS */
+.byntra-ai-root .byntra-ai-window {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: min(680px, calc(100dvh - 100px));
+  max-height: calc(100dvh - 100px);
+  min-height: 260px;
+  box-sizing: border-box;
+}
+.byntra-ai-root .byntra-ai-header,
+.byntra-ai-root .byntra-ai-composer,
+.byntra-ai-root .byntra-ai-footer {
+  flex: 0 0 auto;
+}
+.byntra-ai-root .byntra-ai-messages {
+  flex: 1 1 0;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #a88e6b transparent;
+  padding-bottom: 14px;
+}
+.byntra-ai-root .byntra-ai-message {
+  min-width: 0;
+  max-width: 100%;
+}
+.byntra-ai-root .byntra-ai-message-assistant .byntra-ai-bubble {
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.byntra-ai-root .byntra-ai-message-user .byntra-ai-bubble {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.byntra-ai-root .byntra-ai-composer {
+  position: relative;
+  bottom: auto;
+  z-index: 2;
+}
+.byntra-ai-root .byntra-ai-composer textarea {
+  min-height: 40px;
+  max-height: 110px;
+  resize: vertical;
+}
+.byntra-ai-root .byntra-ai-response {
+  font-size: 0.89rem;
+  line-height: 1.6;
+}
+.byntra-ai-root .byntra-ai-response h3 {
+  font-size: 1.13rem;
+}
+.byntra-ai-root .byntra-ai-response h4 {
+  font-size: 1rem;
+}
+.byntra-ai-root .byntra-ai-cards {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+}
+.byntra-ai-root .byntra-ai-card {
+  padding: 12px;
+}
+@media (max-width: 600px) {
+  .byntra-ai-root .byntra-ai-window {
+    height: min(700px, calc(100dvh - 90px));
+    max-height: calc(100dvh - 90px);
+  }
+}

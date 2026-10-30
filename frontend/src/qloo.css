@@ -1,0 +1,98 @@
+/* BYNTRA Qloo enhancements. Uses existing forest-green / cream design. */
+.qloo-section {
+  margin: 28px 0;
+  padding: clamp(18px, 4vw, 30px);
+  border: 1px solid rgba(212, 183, 131, .32);
+  border-radius: 24px;
+  background: linear-gradient(145deg, #09271f, #041812);
+  color: #f8f0df;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, .12);
+}
+.qloo-section-heading h2 { margin: 9px 0 8px; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.55rem, 3.5vw, 2.25rem); line-height: 1.2; }
+.qloo-section-heading p, .qloo-section p { line-height: 1.55; }
+.qloo-section-heading p, .qloo-hint, .qloo-attribution { color: #d4d9d1; }
+.qloo-eyebrow { display: inline-flex; align-items: center; gap: 8px; color: #e3c99c; text-transform: uppercase; letter-spacing: .13em; font-size: .72rem; font-weight: 700; }
+.qloo-search-form { margin: 22px 0 12px; display: flex; align-items: center; gap: 10px; padding: 7px 8px 7px 14px; border-radius: 15px; border: 1px solid #486457; background: #f7ecdd; color: #183a2e; }
+.qloo-search-form input { min-width: 0; flex: 1; padding: 11px 4px; background: transparent; color: #143529; border: none; outline: none; font: inherit; }
+.qloo-search-form input::placeholder { color: #6d7b70; }
+.qloo-search-form button, .qloo-control-row button { flex-shrink: 0; display: inline-flex; justify-content: center; align-items: center; gap: 7px; border: 0; border-radius: 11px; background: #d6b58d; color: #10291f; padding: 11px 17px; font-weight: 700; cursor: pointer; }
+.qloo-search-form button:disabled, .qloo-control-row button:disabled { opacity: .55; cursor: wait; }
+.qloo-error { margin: 13px 0; padding: 12px; border: 1px solid #d89e94; border-radius: 12px; background: #4b2422; color: #fff1e9; overflow-wrap: anywhere; }
+.qloo-hint { font-size: .88rem; margin: 12px 0; }
+.qloo-subheading { font-size: 1.08rem; margin: 24px 0 13px; color: #f9ebd4; }
+.qloo-results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 175px), 1fr)); gap: 10px; }
+.qloo-select-card { min-width: 0; display: flex; align-items: center; gap: 10px; padding: 10px; border: 1px solid #506b5e; border-radius: 12px; background: #12392c; color: #f7ecdd; text-align: left; cursor: pointer; }
+.qloo-select-card img { width: 42px; height: 42px; border-radius: 8px; object-fit: cover; flex-shrink: 0; }
+.qloo-select-card span { flex: 1; min-width: 0; overflow-wrap: anywhere; font-size: .88rem; }
+.qloo-select-card.qloo-selected { border-color: #e2c08e; box-shadow: inset 0 0 0 1px #e2c08e; }
+.qloo-bridge-controls { margin-top: 23px; padding-top: 16px; border-top: 1px solid #416154; }
+.qloo-control-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.qloo-control-row select, .qloo-control-row input { min-width: 0; flex: 1 1 145px; border: 1px solid #587064; border-radius: 11px; background: #f7ecdd; color: #163b2d; padding: 11px; font: inherit; }
+.qloo-entity-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 195px), 1fr)); gap: 13px; margin-top: 14px; }
+.qloo-entity-card { min-width: 0; overflow: hidden; border: 1px solid #496454; border-radius: 15px; background: #12372b; }
+.qloo-entity-image { width: 100%; height: 132px; object-fit: cover; display: block; }
+.qloo-entity-fallback { display: flex; justify-content: center; align-items: center; background: #214d3a; color: #d6b58d; }
+.qloo-entity-details { display: flex; flex-direction: column; align-items: flex-start; gap: 7px; padding: 13px; }
+.qloo-entity-details strong { overflow-wrap: anywhere; }
+.qloo-entity-details small { color: #d3d9d1; }
+.qloo-save-button { display: inline-flex; align-items: center; gap: 6px; border: 1px solid #ac9672; border-radius: 99px; padding: 7px 11px; color: #f3dfba; background: transparent; cursor: pointer; font: inherit; font-size: .82rem; }
+.qloo-attribution { font-size: .77rem; margin: 20px 0 0; }
+.qloo-journey-section { margin-top: 18px; }
+.qloo-journey-section h3 { font-family: 'Playfair Display', Georgia, serif; margin: 12px 0; }
+.qloo-link-button { display: inline-flex; align-items: center; gap: 6px; border: 0; background: none; color: #e3c99c; font: inherit; font-weight: 700; cursor: pointer; padding: 8px 0; }
+@media (max-width: 560px) {
+  .qloo-section { padding: 17px; border-radius: 18px; }
+  .qloo-search-form { flex-wrap: wrap; }
+  .qloo-search-form input { flex-basis: calc(100% - 40px); }
+  .qloo-search-form button { width: 100%; }
+  .qloo-control-row > * { width: 100%; flex-basis: 100%; }
+  .qloo-results-grid { grid-template-columns: 1fr 1fr; }
+  .qloo-entity-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 360px) {
+  .qloo-results-grid, .qloo-entity-grid { grid-template-columns: 1fr; }
+}
+
+
+/* Real cultural atlas. Keeps BYNTRA's existing layout and palette. */
+.public-discovery { margin: 28px 0; }
+.public-discovery-heading { margin-bottom: 18px; }
+.public-discovery-heading h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(1.55rem, 3vw, 2.1rem); margin: 9px 0 5px; }
+.public-discovery-heading p { opacity: .8; line-height: 1.55; }
+.public-discovery-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; }
+.public-discovery-card { position: relative; min-width: 0; min-height: 220px; display: flex; align-items: flex-end; overflow: hidden; border-radius: 16px; background: #183d2e; text-decoration: none; color: #fff5e7; border: 1px solid rgba(222,190,140,.25); }
+.public-discovery-card img, .public-discovery-fallback { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.public-discovery-fallback { display: grid; place-items: center; color: #dfc393; }
+.public-discovery-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(transparent 20%, rgba(4,22,16,.94)); }
+.public-discovery-caption { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 5px; padding: 15px; min-width: 0; }
+.public-discovery-caption strong { font-family: 'Playfair Display', Georgia, serif; font-size: 1.12rem; overflow-wrap: anywhere; }
+.public-discovery-caption small { color: #e6c99d; font-size: .73rem; }
+.public-discovery-credit { font-size: .75rem; opacity: .65; margin: 12px 0; }
+.public-discovery-card:hover { border-color: #e6c99d; transform: translateY(-2px); }
+.category-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; margin: 22px 0 30px; }
+.category-grid .category-tile { position: relative; isolation: isolate; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; min-height: 190px; padding: 15px; background-color: #153e2d; background-position: center; background-size: cover; color: #fff7eb; border: 1px solid rgba(222,190,140,.25); border-radius: 17px; overflow: hidden; text-align: left; }
+.category-grid .category-tile::before { content: ''; position: absolute; z-index: -1; inset: 0; background: linear-gradient(transparent 5%, rgba(3,20,14,.92)); }
+.category-grid .category-tile svg { color: #e4c28e; margin-bottom: 9px; }
+.category-grid .category-tile strong { font-family: 'Playfair Display', Georgia, serif; font-size: 1.25rem; }
+.category-grid .category-tile small { color: #e7dac7; margin-top: 5px; }
+.category-grid .category-tile:nth-child(1) { background-image: url('https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=700&q=80'); }
+.category-grid .category-tile:nth-child(2) { background-image: url('https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=700&q=80'); }
+.category-grid .category-tile:nth-child(3) { background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=700&q=80'); }
+.category-grid .category-tile:nth-child(4) { background-image: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=700&q=80'); }
+.category-grid .category-tile:nth-child(5) { background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?w=700&q=80'); }
+.category-grid .category-tile:nth-child(6) { background-image: url('https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=700&q=80'); }
+.category-grid .category-tile:nth-child(7) { background-image: url('https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=700&q=80'); }
+.category-grid .category-tile:nth-child(8) { background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=700&q=80'); }
+.category-grid .category-tile:nth-child(9) { background-image: url('https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=700&q=80'); }
+.category-grid .category-tile:nth-child(10) { background-image: url('https://images.unsplash.com/photo-1531058020387-3be344556be6?w=700&q=80'); }
+.category-grid .category-tile:nth-child(11) { background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=700&q=80'); }
+.category-grid .category-tile:nth-child(12) { background-image: url('https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=700&q=80'); }
+.category-grid .category-tile:nth-child(13) { background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?w=700&q=80'); }
+.category-grid .category-tile:nth-child(14) { background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=700&q=80'); }
+.category-grid .category-tile:nth-child(15) { background-image: url('https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=700&q=80'); }
+.category-grid .category-tile:nth-child(16) { background-image: url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=700&q=80'); }
+.category-grid .category-tile:nth-child(17) { background-image: url('https://images.unsplash.com/photo-1461360370896-922624d12aa1?w=700&q=80'); }
+.category-grid .category-tile:nth-child(18) { background-image: url('https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=700&q=80'); }
+.category-grid .category-tile:nth-child(19) { background-image: url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=700&q=80'); }
+@media (min-width: 800px) { .public-discovery-grid { grid-template-columns: repeat(4,minmax(0,1fr)); } .category-grid { grid-template-columns: repeat(4,minmax(0,1fr)); } }
+@media (max-width: 420px) { .public-discovery-card { min-height: 175px; } .category-grid .category-tile { min-height: 165px; } }
