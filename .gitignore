@@ -10,3 +10,6 @@ __pycache__/
 *.sqlite3
 .venv/
 uploads/
+backend/data/.session_secret
+
+frontend/tsconfig.tsbuildinfo
